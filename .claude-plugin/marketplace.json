@@ -1,0 +1,13 @@
+{
+  "name": "aw-build-auto",
+  "owner": {
+    "name": "wisleyaguiar"
+  },
+  "plugins": [
+    {
+      "name": "vlaeg",
+      "source": "./",
+      "description": "Protocolo V.L.A.E.G. para criar apps, sistemas, dashboards e automações integrados a serviços externos."
+    }
+  ]
+}

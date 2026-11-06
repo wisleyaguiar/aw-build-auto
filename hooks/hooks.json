@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Plugin vlaeg ativo. Pedido para criar app, sistema, dashboard, automação ou integração com serviços externos: invoque a skill vlaeg:piloto antes de escrever qualquer código.'"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/gate_tools.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

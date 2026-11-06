@@ -1,0 +1,9 @@
+.DS_Store
+.serena
+.boost
+.spec
+.prompts
+.env
+.mcp.json
+__pycache__/
+docs/protocolo_vlaeg.md

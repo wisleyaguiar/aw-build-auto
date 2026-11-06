@@ -1,0 +1,8 @@
+{
+  "name": "vlaeg",
+  "version": "0.1.0",
+  "description": "Protocolo V.L.A.E.G. (Visão, Link, Arquitetura, Estilo, Gatilho) para criar apps, sistemas, dashboards e automações integrados a serviços externos.",
+  "author": {
+    "name": "wisleyaguiar"
+  }
+}
