@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Testes do hook
+        run: python3 -m unittest hooks/test_gate_tools.py
+      - name: Instalar Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      # sem --strict: ele reprova por falta de ícone, que só importa no diretório oficial
+      - name: Validar plugin
+        run: claude plugin validate . --profile directory

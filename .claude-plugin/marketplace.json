@@ -3,6 +3,9 @@
   "owner": {
     "name": "wisleyaguiar"
   },
+  "metadata": {
+    "description": "Plugins de wisleyaguiar para Claude Code."
+  },
   "plugins": [
     {
       "name": "vlaeg",

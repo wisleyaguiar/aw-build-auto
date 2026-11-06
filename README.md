@@ -7,7 +7,7 @@ Plugin que guia a criação de apps, sistemas, dashboards e automações que int
 No Claude Code:
 
 ```
-/plugin marketplace add /Users/wisleyaguiar/orca/projects/aw-build-auto
+/plugin marketplace add wisleyaguiar/aw-build-auto
 /plugin install vlaeg@aw-build-auto
 ```
 
@@ -35,5 +35,19 @@ Requisito: `python3` no PATH (usado pelo hook e pelos `tools/` dos projetos).
 
 ```
 python3 -m unittest hooks/test_gate_tools.py
-claude plugin validate .
+claude plugin validate . --profile directory
 ```
+
+O CI roda esses dois comandos a cada push na `main` e em cada PR.
+
+## Lançar versão
+
+1. Mude `version` em `.claude-plugin/plugin.json` (ex.: `0.2.0`) e faça commit na `main`.
+2. `git tag v0.2.0 && git push origin v0.2.0`
+3. O workflow `Release` confere se a tag bate com o `plugin.json` e cria a Release com notas automáticas.
+
+Quem já instalou recebe o código da `main` ao atualizar o marketplace. A Release serve de marco e changelog.
+
+## Licença
+
+MIT. Veja [LICENSE](LICENSE).
